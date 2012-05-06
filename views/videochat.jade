@@ -1,0 +1,45 @@
+h1=title
+head
+	script(src='http://staging.tokbox.com/v0.91/js/TB.min.js')
+	script(type='text/javascript')
+		var apiKey = '14994562';
+		var sessionId = '2_MX4xMjMyMDgxfjcwLjQyLjQ3Ljc4fjIwMTItMDUtMDggMDA6MjA6NDQuNDkwMDA3KzAwOjAwfjAuNzc4ODk1NjM0ODgzfg';
+		var token = 'devtoken';   
+
+		var session = TB.initSession(sessionId);
+		session.addEventListener('sessionConnected', sessionConnectedHandler);
+		session.addEventListener('streamCreated', streamCreatedHandler);
+
+		session.connect(apiKey, token);
+
+		var publisher;
+	
+		function sessionConnectedHandler(event) {
+			publisher = session.publish('myPublisherDiv');
+			subscribeToStreams(event.streams);
+		}   
+
+		function streamCreatedHandler(event) {
+			console.log('stream created');
+			subscribeToStreams(event.streams);
+		}
+
+		function subscribeToStreams(streams) {
+			for (var i = 0; i < streams.length; i++) {
+				// Make sure we don't subscribe to ourself
+				if(streams[i].connection.connectionId == session.connection.connectionId) {
+					return;
+				}
+				
+				var div = document.createElement('div');
+				div.setAttribute('id', 'stream' + streams[i].streamId);				       document.body.appendChild(div);
+
+				session.subscribe(streams[i], div.id);
+
+			}
+
+		}
+
+body
+	div(id='myPublisherDiv')
+
