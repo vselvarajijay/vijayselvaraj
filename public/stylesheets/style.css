@@ -9,6 +9,10 @@ html {
 	margin:0px;
 }
 
+div p {
+	
+	color: #D15243;
+}
 p {
 	height: 100px;
 }

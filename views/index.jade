@@ -2,7 +2,7 @@ head
 	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js')
 	script(type='text/javascript')
 		$(document).ready(function(){		
-			$('h2 a').click(function(){
+			$('h3 a').click(function(){
 				var el = $(this).attr('href');
 				var elWrapped = $(el);
 				scrollToDiv(elWrapped,40);
@@ -22,30 +22,58 @@ head
 body	
 	div(id='menu')
 		h1 Vijay Selvaraj
-		h2 
+		h3 
 			a(href='#About') About 
-		h2
+		h3
 			a(href='#Scrum') Scrum
-		h2
+		h3
 			a(href='#XP') Extreme Programming
-		h2
+		h3
 			a(href='#Git') Git
-		h2
+		h3
 			a(href='#Nodejs') Node.js
-		h2
+		h3
 			a(href='#MongoDB') mongoDB
+		h3
+			a(href='#SQL') SQL
+		h3
+			a(href='#Ubuntu') Ubuntu
+		h3
+			a(href='#Robotics') Robotics
+		h3
+			a(href='#ComputerVision') Computer Vision
 	div(id='content')		
 		div(id='About', class='sub_content')
-			p Something about me
+			h2 About
+			p something about me
 			img(src='/images/linked_in.png', width='35px', style='margin-top:30px;', onclick="window.open('http://www.linkedin.com/in/vijayselvaraj')")
 			img(src='/images/twitter_grey.png', height='35px', style='margin-top:30px;', onclick="window.open('http://twitter.com/vselvarajijay')")
 		div(id='Scrum', class='sub_content')
-			p Scrum
+			h2 Scrum
+			p experiences with Scrum
 		div(id='XP', class='sub_content')
-			p Extreme Programming
+			h2 Extreme Programming
+			p I'll talk a little about XP
 		div(id='Git', class='sub_content')
-			p Git version control
+			h2 Git
+			p I like Git
 		div(id='Nodejs', class='sub_content')
-			p some stuff in Node.js
+			h2 Node.js
+			p Node is fun
 		div(id='MongoDB', class='sub_content')
-			p some mongodb stuff
+			h2 mongoDB
+			p this is easy
+		div(id='SQL', class='sub_content')
+			h2 SQL
+			p working with data sets
+		div(id='Ubuntu', class='sub_content')
+			h2 Ubuntu
+			p working with ubuntu
+		div(id='Robotics', class='sub_content')
+			h2 Robotics
+			p diving into hardware
+		div(id='ComputerVision', class='sub_content')
+			h2 Computer Vision
+			p stuff I did
+
+
