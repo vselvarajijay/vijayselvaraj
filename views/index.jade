@@ -1,0 +1,50 @@
+head
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js')
+	script(type='text/javascript')
+		$(document).ready(function(){		
+			$('h2 a').click(function(){
+				var el = $(this).attr('href');
+				var elWrapped = $(el);
+				scrollToDiv(elWrapped,40);
+				return false;
+			});
+			function scrollToDiv(element,navheight){
+				var offset = element.offset();
+				var offsetTop = offset.top;
+				var totalScroll = offsetTop-navheight;
+				$('body,html').animate({
+						scrollTop: totalScroll
+				}, 500);
+			}
+		});
+
+
+body
+
+	div(id='menu')
+		h1 Vijay Selvaraj
+		h2 
+			a(href='#About') About 
+		h2
+			a(href='#Scrum') Scrum
+		h2
+			a(href='#XP') Extreme Programming
+		h2
+			a(href='#Git') Git
+		h2
+			a(href='#Nodejs') Node.js
+		h2
+			a(href='#MongoDB') mongoDB
+	div(id='content')
+		div(id='About', class='sub_content')
+			p Something about me
+		div(id='Scrum', class='sub_content')
+			p Scrum
+		div(id='XP', class='sub_content')
+			p Extreme Programming
+		div(id='Git', class='sub_content')
+			p Git version control
+		div(id='Nodejs', class='sub_content')
+			p some stuff in Node.js
+		div(id='MongoDB', class='sub_content')
+			p some mongodb stuff
