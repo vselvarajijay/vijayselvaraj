@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Vijay Selvaraj]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2012-10-04T15:57:59-07:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[vijay selvaraj]]></title>
+  <link href="http://vijayselvaraj.com/atom.xml" rel="self"/>
+  <link href="http://vijayselvaraj.com/"/>
+  <updated>2012-10-04T16:52:08-07:00</updated>
+  <id>http://vijayselvaraj.com/</id>
   <author>
     <name><![CDATA[vijay selvaraj]]></name>
     
@@ -14,17 +14,62 @@
 
   
   <entry>
-    <title type="html"><![CDATA[first post - hell yes.]]></title>
-    <link href="http://yoursite.com/blog/2012/10/04/first-post-hell-yes/"/>
+    <title type="html"><![CDATA[Fleet Week - San Francisco 2012]]></title>
+    <link href="http://vijayselvaraj.com/blog/2012/10/04/fleet-week-san-francisco-2012/"/>
+    <updated>2012-10-04T16:10:00-07:00</updated>
+    <id>http://vijayselvaraj.com/blog/2012/10/04/fleet-week-san-francisco-2012</id>
+    <content type="html"><![CDATA[<p><img src="images/photos/oracle_team_usa.jpg"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First post with Octopress]]></title>
+    <link href="http://vijayselvaraj.com/blog/2012/10/04/first-post-hell-yes/"/>
     <updated>2012-10-04T15:47:00-07:00</updated>
-    <id>http://yoursite.com/blog/2012/10/04/first-post-hell-yes</id>
+    <id>http://vijayselvaraj.com/blog/2012/10/04/first-post-hell-yes</id>
     <content type="html"><![CDATA[
 
-<figure class='code'><figcaption><span>coffee  </span></figcaption>
+<figure class='code'><figcaption><span>language: SQL  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">hello</span> <span class="nf">()-&gt;</span>
-</span><span class='line'>    <span class="s">&quot;testing!&quot;</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">SELECT</span> <span class="n">s</span><span class="p">.</span><span class="n">school_name</span><span class="p">,</span> <span class="n">t</span><span class="p">.</span><span class="n">teacher_name</span>
+</span><span class='line'><span class="k">FROM</span> <span class="n">school</span> <span class="n">s</span>
+</span><span class='line'><span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">schoolteacher</span> <span class="n">st</span> <span class="k">on</span> <span class="n">s</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="n">school_id</span>
+</span><span class='line'><span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">teacher</span> <span class="n">t</span> <span class="k">on</span> <span class="n">st</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="n">teacher_id</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>language: CoffeeScript  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">hello_world</span> <span class="nf">()-&gt;</span>
+</span><span class='line'>    <span class="s">&quot;Hello, world!&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>language: JavaScript  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">hello_wold</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s2">&quot;Hello, world!&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>language: Python  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&quot;Hello, world!&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

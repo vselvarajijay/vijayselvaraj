@@ -1,0 +1,6 @@
+<div class="highlight"><pre><span class="k">SELECT</span> <span class="n">s</span><span class="p">.</span><span class="n">school_name</span><span class="p">,</span> <span class="n">t</span><span class="p">.</span><span class="n">teacher_name</span>
+<span class="k">FROM</span> <span class="n">school</span> <span class="n">s</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">schoolteacher</span> <span class="n">st</span> <span class="k">on</span> <span class="n">s</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="n">school_id</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">teacher</span> <span class="n">t</span> <span class="k">on</span> <span class="n">st</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="n">teacher_id</span>
+</pre>
+</div>
