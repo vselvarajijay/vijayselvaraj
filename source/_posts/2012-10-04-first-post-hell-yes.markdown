@@ -5,6 +5,8 @@ date: 2012-10-04 15:47
 comments: true
 categories:
 ---
+I finally to around to getting this site started with Octopress.  My favorite part of this blogging framework has been the beautiful inline code injection.  Take a look!
+
 {% codeblock language: SQL lang:sql %}
 SELECT s.school_name, t.teacher_name
 FROM school s

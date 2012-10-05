@@ -4,7 +4,7 @@
   <title><![CDATA[vijay selvaraj]]></title>
   <link href="http://vijayselvaraj.com/atom.xml" rel="self"/>
   <link href="http://vijayselvaraj.com/"/>
-  <updated>2012-10-04T16:52:08-07:00</updated>
+  <updated>2012-10-05T03:55:10-07:00</updated>
   <id>http://vijayselvaraj.com/</id>
   <author>
     <name><![CDATA[vijay selvaraj]]></name>
@@ -14,11 +14,28 @@
 
   
   <entry>
+    <title type="html"><![CDATA[A neat little online UML tool]]></title>
+    <link href="http://vijayselvaraj.com/blog/2012/10/05/a-neat-little-online-uml-tool/"/>
+    <updated>2012-10-05T03:20:00-07:00</updated>
+    <id>http://vijayselvaraj.com/blog/2012/10/05/a-neat-little-online-uml-tool</id>
+    <content type="html"><![CDATA[<p><img class="right" src="http://vijayselvaraj.com/images/uml/vijay_writes_blog.png"></p>
+
+<p>I am still trying to figure out what the heck I have this site for.  No luck yet figuring out what my future posts will be about, but I do know it will likely be related to software engineering.  I love visuals, and I know there will be times the best way for me to express what I know is through visuals, so I went surfing for a UML modeling tool and came across yUML which is in beta.</p>
+
+<p>http://www.yuml.me</p>
+
+<p>Have a look, I’ll very likely be using this tool to post UML models on this site.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Fleet Week - San Francisco 2012]]></title>
     <link href="http://vijayselvaraj.com/blog/2012/10/04/fleet-week-san-francisco-2012/"/>
     <updated>2012-10-04T16:10:00-07:00</updated>
     <id>http://vijayselvaraj.com/blog/2012/10/04/fleet-week-san-francisco-2012</id>
-    <content type="html"><![CDATA[<p><img src="images/photos/oracle_team_usa.jpg"></p>
+    <content type="html"><![CDATA[<p><img src="http://vijayselvaraj.com/images/photos/oracle_team_usa.jpg"></p>
+
+<p>I heard the Blue Angles fly over our office as they started to do their practice runs.  After hearing them I couldn’t resist the urge to run down to the Embarcadero.  Looks like there will be a race this weekend ;-)</p>
 ]]></content>
   </entry>
   
@@ -27,7 +44,7 @@
     <link href="http://vijayselvaraj.com/blog/2012/10/04/first-post-hell-yes/"/>
     <updated>2012-10-04T15:47:00-07:00</updated>
     <id>http://vijayselvaraj.com/blog/2012/10/04/first-post-hell-yes</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>I finally to around to getting this site started with Octopress.  My favorite part of this blogging framework has been the beautiful inline code injection.  Take a look!</p>
 
 <figure class='code'><figcaption><span>language: SQL  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
