@@ -9,7 +9,7 @@
   <meta name="author" content="vijay selvaraj">
 
   
-  <meta name="description" content="I am still trying to figure out what the heck I have this site for. No luck yet. However I do know that it would likely be related to software &hellip;">
+  <meta name="description" content="Knockout is another JavaScript library to help Web Developers write desktop like web applications with more ease. The library makes data binding &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -26,6 +26,7 @@
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="vijay selvaraj" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
@@ -70,6 +71,139 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/10/07/knockout-dot-js/">Knockout.js</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-07T13:01:00-07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Knockout is another JavaScript library to help Web Developers write desktop like web applications with more ease.  The library makes data binding easier for developers.  I only just started to work with it recently.  So far it seems to work very well, though the syntax takes a bit getting used to.  Also keep in mind that I am fairly new to ‘real’ JavaScript development.  I did find understanding MVVM helpful.  Getting used to the syntactical sugar will just take some time.</p>
+
+<p>Some links I found to be helpful:</p>
+
+<ul>
+<li><a href="http://learn.knockoutjs.com/">Online tutorial</a></li>
+<li><a href="http://russelleast.wordpress.com/2008/08/09/overview-of-the-modelview-viewmodel-mvvm-pattern-and-data-binding/">MVVM</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/05/neo4j-cypher/">Neo4j Cypher</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-05T09:49:00-07:00" pubdate data-updated="true">Oct 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I had a look at Neo4j a while back.  The thought of graph databases was very
+interesting.  You can have some really elegant solutions to complex problems
+modeled with graphs.</p>
+
+<p>Recently I wen’t to a Neo4j hack day.  Peter Neubauer was there helping us out
+with a quick Cypher overview.  My eyes lit up as soon as I saw how you can
+construct queries with Cypher.</p>
+
+<p>SQL is great for relational data.  With Cypher, the queries model a graph
+structure.</p>
+
+<pre><code>           (A)        (E)
+
+         /     \    /
+
+     (B)   --   (C)  -- (G)
+
+               /   \
+
+             (D)    (F)
+
+
+//This Cypher query selects all nodes that are related to C
+
+START c=node(c)
+MATCH n-[r]-c
+RETURN n, c
+
+
+ n |  c
+ ------
+ B |  C
+ A |  C
+ E |  C
+ D |  C
+ F |  C
+ G |  C
+
+ //This Cypher query selects all nodes that are related to C and are not
+ //related to B
+
+ START c=node(c), b=node(b)
+ MATCH n-[r]-c
+ WHERE not(n--&gt;b)
+ RETURN n, c
+
+ n |  c
+ ------
+ B |  C
+ E |  C
+ D |  C
+ F |  C
+ G |  C
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/10/05/a-neat-little-online-uml-tool/">A Neat Little Online UML Tool</a></h1>
     
     
@@ -95,9 +229,7 @@
 
   <div class="entry-content"><p><img class="right" src="/images/uml/vijay_writes_blog.png"></p>
 
-<p>I am still trying to figure out what the heck I have this site for.  No luck yet.  However I do know that it would likely be related to software engineering.  I love visuals, and I know there will be times the best way for me to express what I know is through visuals.  After some surfing for a UML modeling tool, I came across yUML which is in beta.</p>
-
-<p>http://www.yuml.me</p>
+<p>I am still trying to figure out what the heck I have this site for.  No luck yet.  However I do know that it would likely be related to software engineering.  I love visuals, and I know there will be times the best way for me to express what I know is through visuals.  After some surfing for a UML modeling tool, I came across <a href=http://www.yuml.me>yUML</a> which is in beta.</p>
 
 <p>Have a look, I’ll be using this tool to post UML models on this site.</p>
 </div>
@@ -238,6 +370,14 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/07/knockout-dot-js/">Knockout.js</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/05/neo4j-cypher/">Neo4j Cypher</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/10/05/a-neat-little-online-uml-tool/">A neat little online UML tool</a>
