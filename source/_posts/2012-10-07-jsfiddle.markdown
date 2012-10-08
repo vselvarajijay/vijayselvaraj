@@ -1,0 +1,16 @@
+---
+layout: post
+title: "jsFiddle"
+date: 2012-10-07 20:00
+comments: true
+categories: 
+---
+
+
+Adding code samples from jsFiddle is a breeze on Octopress.  Now I can add some working examples on my blog.  This is very exciting!
+
+    {% raw %} {% jsfiddle k32tf %} {% endraw %}
+
+
+This example is from Knockout.js's tutorial-1
+{% jsfiddle k32tf %}
