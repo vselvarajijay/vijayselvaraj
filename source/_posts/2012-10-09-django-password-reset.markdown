@@ -15,10 +15,15 @@ from Django (thank you Django).
 
 
     >>> python manage.py shell
+
     ## Use Django Shell to pull in all settings to your session
 
     >>> from django.contrib.auth.models import User
     >>> vijay = User.objects.get(username__exact='vijay')
     >>> vijay.set_password('my new password')
     >>> vijay.save()
+
+    ## Done - simple right?
+
+
 

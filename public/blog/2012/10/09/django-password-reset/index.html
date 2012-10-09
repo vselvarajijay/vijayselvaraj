@@ -113,12 +113,15 @@ from there.  Well, it turns out the right way is actually to do it straight
 from Django (thank you Django).</p>
 
 <pre><code>&gt;&gt;&gt; python manage.py shell
+
 ## Use Django Shell to pull in all settings to your session
 
 &gt;&gt;&gt; from django.contrib.auth.models import User
 &gt;&gt;&gt; vijay = User.objects.get(username__exact='vijay')
 &gt;&gt;&gt; vijay.set_password('my new password')
 &gt;&gt;&gt; vijay.save()
+
+## Done - simple right?
 </code></pre>
 </div>
 
