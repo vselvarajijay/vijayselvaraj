@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Knockout.js - vijay selvaraj</title>
+  <title>Django password reset - vijay selvaraj</title>
   <meta name="author" content="vijay selvaraj">
 
   
-  <meta name="description" content="Knockout is another JavaScript library to help Web Developers write desktop like web applications with more ease. The library makes data binding &hellip;">
+  <meta name="description" content="I keep forgetting my password on the systems I am working on. Today I switched
+gears to a Django project where the DB is using Postgres. I thought &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vijayselvaraj.com/blog/2012/10/07/knockout-dot-js/">
+  <link rel="canonical" href="http://vijayselvaraj.com/blog/2012/10/09/django-password-reset/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">Knockout.js</h1>
+      <h1 class="entry-title">Django Password Reset</h1>
     
     
       <p class="meta">
@@ -96,7 +97,7 @@
   
 
 
-<time datetime="2012-10-07T13:01:00-07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
+<time datetime="2012-10-09T14:29:00-07:00" pubdate data-updated="true">Oct 9<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,15 +106,20 @@
   </header>
 
 
-<div class="entry-content"><p>Knockout is another JavaScript library to help Web Developers write desktop like web applications with more ease.  The library makes data binding easier for developers.  I only just started to work with it recently.  So far it seems to work very well, though the syntax takes a bit getting used to.  Also keep in mind that I am fairly new to ‘real’ JavaScript development.  I did find understanding MVVM helpful.  Getting used to the syntactical sugar will just take some time.</p>
+<div class="entry-content"><p>I keep forgetting my password on the systems I am working on.  Today I switched
+gears to a Django project where the DB is using Postgres.  I thought the right
+way was to just go into the DB, find my username, and then change the password
+from there.  Well, it turns out the right way is actually to do it straight
+from Django (thank you Django).</p>
 
-<p>Some links I found to be helpful:</p>
+<pre><code>&gt;&gt;&gt; python manage.py shell
+## Use Django Shell to pull in all settings to your session
 
-<ul>
-<li><a href="http://learn.knockoutjs.com/">Online tutorial</a></li>
-<li><a href="http://russelleast.wordpress.com/2008/08/09/overview-of-the-modelview-viewmodel-mvvm-pattern-and-data-binding/">MVVM</a></li>
-</ul>
-
+&gt;&gt;&gt; from django.contrib.auth.models import User
+&gt;&gt;&gt; vijay = User.objects.get(username__exact='vijay')
+&gt;&gt;&gt; vijay.set_password('my new password')
+&gt;&gt;&gt; vijay.save()
+</code></pre>
 </div>
 
 
@@ -136,7 +142,7 @@
   
 
 
-<time datetime="2012-10-07T13:01:00-07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
+<time datetime="2012-10-09T14:29:00-07:00" pubdate data-updated="true">Oct 9<span>th</span>, 2012</time>
       
 
 
@@ -144,7 +150,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vijayselvaraj.com/blog/2012/10/07/knockout-dot-js/" data-via="" data-counturl="http://vijayselvaraj.com/blog/2012/10/07/knockout-dot-js/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vijayselvaraj.com/blog/2012/10/09/django-password-reset/" data-via="" data-counturl="http://vijayselvaraj.com/blog/2012/10/09/django-password-reset/" >Tweet</a>
   
   
   
@@ -155,10 +161,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/05/neo4j-cypher/" title="Previous Post: Neo4j Cypher">&laquo; Neo4j Cypher</a>
+        <a class="basic-alignment left" href="/blog/2012/10/07/jsfiddle/" title="Previous Post: jsFiddle">&laquo; jsFiddle</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/10/07/jsfiddle/" title="Next Post: jsFiddle">jsFiddle &raquo;</a>
       
     </p>
   </footer>
@@ -224,8 +228,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vijayselvaraj.com/blog/2012/10/07/knockout-dot-js/';
-        var disqus_url = 'http://vijayselvaraj.com/blog/2012/10/07/knockout-dot-js/';
+        var disqus_identifier = 'http://vijayselvaraj.com/blog/2012/10/09/django-password-reset/';
+        var disqus_url = 'http://vijayselvaraj.com/blog/2012/10/09/django-password-reset/';
         var disqus_script = 'embed.js';
       
     (function () {

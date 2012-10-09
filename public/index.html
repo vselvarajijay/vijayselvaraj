@@ -9,7 +9,8 @@
   <meta name="author" content="vijay selvaraj">
 
   
-  <meta name="description" content="Adding code samples from jsFiddle is a breeze on Octopress. Now I can add some working examples on my blog. This is very exciting! {% jsfiddle k32tf &hellip;">
+  <meta name="description" content="I keep forgetting my password on the systems I am working on. Today I switched
+gears to a Django project where the DB is using Postgres. I thought &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +78,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/09/django-password-reset/">Django Password Reset</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-09T14:29:00-07:00" pubdate data-updated="true">Oct 9<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/10/09/django-password-reset/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I keep forgetting my password on the systems I am working on.  Today I switched
+gears to a Django project where the DB is using Postgres.  I thought the right
+way was to just go into the DB, find my username, and then change the password
+from there.  Well, it turns out the right way is actually to do it straight
+from Django (thank you Django).</p>
+
+<pre><code>&gt;&gt;&gt; python manage.py shell
+## Use Django Shell to pull in all settings to your session
+
+&gt;&gt;&gt; from django.contrib.auth.models import User
+&gt;&gt;&gt; vijay = User.objects.get(username__exact='vijay')
+&gt;&gt;&gt; vijay.set_password('my new password')
+&gt;&gt;&gt; vijay.save()
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -440,6 +492,10 @@ RETURN n, c
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/09/django-password-reset/">Django password reset</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/07/jsfiddle/">jsFiddle</a>
       </li>
     
@@ -453,10 +509,6 @@ RETURN n, c
     
       <li class="post">
         <a href="/blog/2012/10/05/a-neat-little-online-uml-tool/">A neat little online UML tool</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/04/fleet-week-san-francisco-2012/">Fleet Week - San Francisco 2012</a>
       </li>
     
   </ul>
